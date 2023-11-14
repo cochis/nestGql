@@ -6,6 +6,8 @@ import { ItemsModule } from './items/items.module';
 
 import { join } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -27,6 +29,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true
     }),
     ItemsModule,
+    UsersModule,
+    AuthModule,
 
   ],
   controllers: [],
